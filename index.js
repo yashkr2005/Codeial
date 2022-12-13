@@ -1,9 +1,15 @@
 const express=require('express');
 const router = require('./routes/index');
+const cookieParser=require('cookie-parser');
+const bodyParser=require('body-parser');
+
 const app=express();
 const port=8000;
-
+const db=require('./config/mongoose');
 const expressLayouts=require('express-ejs-layouts');
+
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(cookieParser());
 app.use(expressLayouts);
 //extract styles and scripts from subpages to layouts
 app.set('layout extractStyles',true);
