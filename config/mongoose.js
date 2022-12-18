@@ -1,5 +1,6 @@
 const mongoose=require('mongoose');
 
+mongoose.set("strictQuery", false);
 mongoose.connect('mongodb://localhost/codeial_development');
 const db=mongoose.connection;
 db.on('error',console.error.bind(console,'Error on connecting to MongoDB'));
