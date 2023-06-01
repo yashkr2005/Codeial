@@ -1,5 +1,5 @@
-import express from "./node_modules/express/index.js"
 
+import express from "express";
 import env from "./config/environment.js";
 import logger from "morgan";
 import cookieParser from "cookie-parser";
