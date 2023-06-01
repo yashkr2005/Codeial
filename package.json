@@ -2,7 +2,7 @@
   "name": "codeial",
   "version": "1.0.0",
   "description": "My all social media web application",
-  "type": "module",
+  //"type": "module",
   "exports": "./index.js",
   "scripts": {
     "start": "node index.js",
