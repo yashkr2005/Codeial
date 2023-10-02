@@ -21,7 +21,7 @@ async function home(req, res) {
     let users = await User.find({});
 
     return res.render("home", {
-      title: "Codeial | Home",
+      title: "FreeRoom | Home",
       posts: posts,
       all_users: users,
     });

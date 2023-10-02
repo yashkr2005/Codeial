@@ -1,5 +1,5 @@
 {
-  "name": "codeial",
+  "name": "FreeRoom",
   "version": "1.0.0",
   "description": "My all social media web application",
   "type": "module",
@@ -48,5 +48,14 @@
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
     "sass": "^1.58.3"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashkr2005/Codeial.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yashkr2005/Codeial/issues"
+  },
+  "homepage": "https://github.com/yashkr2005/Codeial#readme"
 }

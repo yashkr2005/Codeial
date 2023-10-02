@@ -14,13 +14,6 @@ const accessLogStream = rfs.createStream("access.log", {
   interval: "1d",
   path: logDirectory,
 });
-
-// const accessLogStream = rfs.createStream('access.log', {
-//     interval: '1hour',
-//     // path: 'logDirectory'
-//     path: 'production_logs'
-// });
-
 const development = {
   name: "development",
   asset_path: "./assets",
@@ -32,10 +25,7 @@ const development = {
     port: 587,
     secure: false,
     auth: {
-      // user: 'alchemy.cn18',
-      // pass: 'codingninjas'
       user: "yashkr4806@gmail.com",
-      //pass: 'CNISFRAUD'
       pass: "dbylwaekoecljjxk",
     },
   },
@@ -63,8 +53,6 @@ const production = {
     port: 587,
     secure: false,
     auth: {
-      // user: 'singalcn7@gmail.com',
-      // pass: 'oytbtsotsvvtwzky'
       user: process.env.FLOCKER_GMAIL_USERNAME,
       pass: process.env.FLOCKER_GMAIL_PASSWORD,
     },
