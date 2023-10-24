@@ -70,7 +70,7 @@ async function create(req, res) {
       // comment = await comment.populate('user', 'name email').execPopulate();
       const nC = await Comment.findById(comment._id).populate("user");
       newComment(nC);
-
+      // console.log(nC);
       let job = queue.create("email", nC).save(function (err) {
         if (err) {
           console.log("Error in sending to the queue", err);

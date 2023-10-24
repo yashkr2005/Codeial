@@ -19,7 +19,7 @@ import passportGoogle from "./config/passport-google-oauth2-strategy.js";
 
 import cm from "connect-mongo";
 const MongoStore = cm(session);
-import sassMiddleware from "node-sass-middleware";
+// import sassMiddleware from "sass";
 import flash from "connect-flash";
 import { setFlash } from "./config/middleware.js";
 import { fileURLToPath } from "url";
@@ -27,6 +27,7 @@ import { dirname } from "path";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+
 // setup the chat server to be used with socket.io
 import http from "http";
 const chatServer = http.Server(app);
@@ -38,17 +39,17 @@ import path from "path";
 
 app.use(cors());
 
-if (env.name === "development") {
-  app.use(
-    sassMiddleware({
-      src: path.join(__dirname, env.asset_path, "scss"),
-      dest: path.join(__dirname, env.asset_path, "css"),
-      debug: true,
-      outputStyle: "extended",
-      prefix: "/css",
-    })
-  );
-}
+// if (env.name === "development") {
+//   app.use(
+//     sassMiddleware({
+//       src: path.join(__dirname, env.asset_path, "scss"),
+//       dest: path.join(__dirname, env.asset_path, "css"),
+//       debug: true,
+//       outputStyle: "extended",
+//       prefix: "/css",
+//     })
+//   );
+// }
 
 app.use(express.urlencoded());
 

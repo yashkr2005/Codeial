@@ -18,8 +18,10 @@ function chatSockets(socketServer) {
     });
 
     // CHANGE :: detect send_message and broadcast to everyone in the room
+
     socket.on("send_message", function (data) {
-      io.in(data.chatroom).emit("receive_message", data);
+      console.log(data);
+      io.sockets.in(data.chatroom).emit("receive_message", data);
     });
   });
 }
